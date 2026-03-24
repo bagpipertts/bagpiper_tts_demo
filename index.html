@@ -1,1 +1,538 @@
-Bagpiper-TTS demo page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Bagpiper-TTS: Natural Language Guided Universal Speech Synthesis">
+  <meta name="description" content="Demo page for Bagpiper TTS system.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="language" content="English">
+
+  <title>Bagpiper-TTS: Natural Language Guided Universal Speech Synthesis</title>
+
+  <link rel="icon" type="image/png" href="static/images/55b02fe65385348c30808a42e45e362e.png">
+  <link rel="apple-touch-icon" href="static/images/55b02fe65385348c30808a42e45e362e.png">
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  </noscript>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+  <!-- JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Bagpiper-TTS: Natural Language Guided Universal Speech Synthesis</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous Authors</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous Institution</span>
+            </div>
+            <p style="margin-top: 1rem; color: #666; font-style: italic;">Under anonymous review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Title -->
+  <section class="section demo-overview">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-1 demo-overview-title">Demo Samples</h2>
+    </div>
+  </section>
+
+  <!-- Instruct TTS -->
+  <section class="section demo-section" id="instruct-tts">
+    <div class="container is-fullhd demo-wide">
+      <h2 class="title is-3">Instruct TTS</h2>
+      <p class="subtitle is-6">Text-to-speech generation from instructed prompts.</p>
+      <div class="card-grid">
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 01</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>In a plain voice: &quot;Get out of this!&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/instruct_tts/audio/common_voice_en_15735839-common_voice_en_15735837_segment2.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 02</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>In a plain voice: &quot;Television can make you dumb, but it can also be good education.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/instruct_tts/audio/common_voice_en_17275818-common_voice_en_17275816_segment2.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 03</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>In a plain voice: &quot;Yeah, I had a bit of a poke at that and failed to work out what was wrong.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/instruct_tts/audio/common_voice_en_17406452-common_voice_en_17406455_segment2.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 04</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>In a plain voice: &quot;A rich farm is rare in this sandy waste.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/instruct_tts/audio/common_voice_en_17880926-common_voice_en_17880932_segment2.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergent -->
+  <section class="section demo-section" id="emergent">
+    <div class="container is-fullhd demo-wide">
+      <h2 class="title is-3">Emergent</h2>
+      <p class="subtitle is-6">Emergent capabilities. Coming soon.</p>
+    </div>
+  </section>
+
+  <!-- Intent to Speech -->
+  <section class="section demo-section" id="intent-to-speech">
+    <div class="container is-fullhd demo-wide">
+      <h2 class="title is-3">Intent to Speech</h2>
+      <p class="subtitle is-6">Generating speech from high-level user intents describing emotion, style, and context.</p>
+      <div class="card-grid">
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 01</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>I want to ask for help without sounding desperate, my voice should be nervous and a bit stuttery, as if I&#x27;m speaking gently to a child.</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/intent_to_speech/audio/adv_intent_to_speech_141.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 02</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>I&#x27;m trying to convey some bad news gently to a large audience, using a calm and composed tone.</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/intent_to_speech/audio/adv_intent_to_speech_053.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 03</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Help me sound excited about the surprise but hesitant and uncertain in the meeting</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/intent_to_speech/audio/adv_intent_to_speech_280.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 04</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Picture me reminding a stranger about a promise they forgot, speaking proud and dignified, can you help me phrase that politely and firmly?</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/intent_to_speech/audio/adv_intent_to_speech_045.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Talker -->
+  <section class="section demo-section" id="multi-talker">
+    <div class="container is-fullhd demo-wide">
+      <h2 class="title is-3">Multi-Talker</h2>
+      <p class="subtitle is-6">Generating multi-speaker dialogues with distinct voice characteristics.</p>
+      <div class="card-grid">
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 01</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Male speaker with a deep, gravelly voice sounds mischievous, female speaker with an animated, expressive voice sounds enthusiastic. They are two musicians discussing a song; female starts, male replies.<br><br>&quot;I think we should add a soaring chorus after the bridge to lift the energy.&quot;<br><br>&quot;Maybe a gritty guitar riff before the verse will give it that edgy feel we need.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/multi_talker/audio/adv_multi_talker_013.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 02</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>A child with a soft, silky voice sounds sympathetic, and an adult male with a rough, weary voice sounds angry, chatting briefly during a coffee break podcast intro. &quot;I think we should try the new blend, it smells amazing.&quot; &quot;No way, that coffee is terrible, and you know it!&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/multi_talker/audio/adv_multi_talker_126.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 03</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Please have a bright, sing-song young female voice sounding angry and a soft, flat young male voice sounding confused, exchanging a polite request in a parent-child scene. &quot;Please put your toys back in the bin now.&quot; &quot;I&#x27;m not sure where the bin is, can you show me?&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/multi_talker/audio/adv_multi_talker_280.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 04</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Adult woman (warm, soothing, bored): &quot;Oh, really? You think that&#x27;s funny, huh?&quot; Teen girl (sharp, clipped, grateful): &quot;Thanks for the joke, sis, it actually made me smile.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/multi_talker/audio/adv_multi_talker_045.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Role Play -->
+  <section class="section demo-section" id="role-play">
+    <div class="container is-fullhd demo-wide">
+      <h2 class="title is-3">Role Play</h2>
+      <p class="subtitle is-6">Generating speech for fictional characters with specific personas and settings.</p>
+      <div class="card-grid">
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 01</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Davor, a Balkan beekeeper of 1860s, whispers: &quot;Stay away from the hives tonight, the smoke betrays a hidden danger.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/role_play/audio/adv_role_play_141.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 02</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Create a TTS line for Gunnar, a WWII-era Swedish bell ringer calmly explaining blackout rules. &quot;Listen closely, the curfew begins at nine, and every light must be hidden.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/role_play/audio/adv_role_play_115.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 03</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Obioma, a West African bookbinder from the WWII era, gently tells bedtime stories to children. &quot;Listen, my little one, as the night weaves stories of brave hearts and quiet hope.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/role_play/audio/adv_role_play_280.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 04</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Alessio, a Sardinian puppeteer who survived a Nazi raid and now tells his narrow escape with trembling hands. &quot;I slipped through the shadows of the bombed port, the strings of my marionettes clutched like lifelines.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/role_play/audio/adv_role_play_045.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SVS (Singing Voice Synthesis) -->
+  <section class="section demo-section" id="svs">
+    <div class="container is-fullhd demo-wide">
+      <h2 class="title is-3">Singing Voice Synthesis (SVS)</h2>
+      <p class="subtitle is-6">Generating singing voices from lyrics and style descriptions.</p>
+      <div class="card-grid">
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 01</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Perform these lyrics as a tender punk torch song with staccato phrasing.<br>&quot;Your reckless heart beats like a broken drum, but I still love the bruised rhythm of your midnight sighs.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/svs/audio/adv_svs_058.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 02</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Please synthesize a bright, hopeful holiday carol in operatic aria style, featuring playful yodeling, soaring belt, and gentle vibrato, delivering energetic, uplifting spirit. &quot;Snowflakes dance upon the night, crystal bells ring clear, we raise our voices to the sky, hope reborn in every cheer.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/svs/audio/adv_svs_053.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 03</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>I want to hear a warm soul ballad, humming vocal style, bright hopeful wedding vibe, gentle vibrato, tender dynamics, uplifting energy, intimate and celebratory. &quot;Together we rise like sunrise, hearts humming a promise, forever echoing love&#x27;s bright tomorrow.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/svs/audio/adv_svs_280.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-card sample-card--posttrain">
+          <div class="sample-header">
+            <span class="sample-title">Sample 04</span>
+          </div>
+          <div class="demo-card-input">
+            <div class="field">
+              <span class="field-label">User Intent</span>
+              <div class="field-content"><p>Create a gospel road-trip anthem with legato, flowing phrasing, opening gently like a sunrise over a dusty highway, evoking nostalgic, bittersweet memories. &quot;Rolling wheels hum a prayer, sunrise paints the sky, old hymns whisper in the wind, and every mile sings a hopeful goodbye.&quot;</p></div>
+            </div>
+          </div>
+          <div class="io-divider"></div>
+          <div class="demo-card-output">
+            <div class="field">
+              <span class="field-label">Audio</span>
+              <audio controls preload="none" src="static/data_bagpipertts/svs/audio/adv_svs_045.wav"></audio>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
