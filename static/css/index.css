@@ -1214,10 +1214,10 @@ a:focus {
 }
 
 .sample-card--posttrain .demo-card-input {
-  min-height: 220px;
+  min-height: 120px;
   height: auto;
   overflow: auto;
-  flex: 1;
+  flex: 0;
 }
 
 .io-divider {
