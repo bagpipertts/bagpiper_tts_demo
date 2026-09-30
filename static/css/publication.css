@@ -1,15 +1,13 @@
 /* Publication header and citation. Institution marks retain their own colors. */
 .publication-hero .hero-body { padding: 3.75rem 1.5rem 3.5rem; }
-.conference-badge {
-  display: inline-flex; align-items: center; gap: .65rem;
-  padding: .45rem .9rem; border: 1px solid #d5e3f6; border-radius: 99px;
-  background: #f5f9ff; color: #315e96; font-size: .76rem;
-  font-weight: 700; letter-spacing: .09em;
+.publication-hero .publication-title {
+  margin: 0 auto 1.75rem !important;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 700 !important;
+  letter-spacing: -.035em;
+  line-height: 1.18 !important;
+  text-wrap: balance;
 }
-.conference-badge:hover { color: #17467f; border-color: #8badcf; }
-.publication-hero .publication-title { margin: 1.6rem 0 1.65rem !important; }
-.paper-name { display: block; font-size: clamp(2.7rem, 5vw, 3.8rem); letter-spacing: -.055em; line-height: 1.06; }
-.paper-subtitle { display: block; margin-top: .6rem; font-size: clamp(1.75rem, 3.5vw, 2.65rem); font-weight: 600; letter-spacing: -.038em; line-height: 1.16; }
 .publication-hero .publication-authors {
   display: flex; flex-wrap: wrap; justify-content: center; gap: .18rem 1.05rem;
   max-width: 850px; margin: 0 auto 1rem; font-size: 1.05rem; font-weight: 500;
@@ -59,7 +57,6 @@ pre.citation-code { background: #f1f4f8 !important; box-shadow: none; margin: 0;
 .citation-status { min-height: 1.6em; font-size: .85rem; color: #315e96; margin-top: .6rem; }
 @media (max-width: 700px) {
   .publication-hero .hero-body { padding: 2.5rem 1.25rem 2.75rem; }
-  .desktop-break { display: none; }
   .publication-hero .publication-authors { font-size: .95rem; gap: .18rem .9rem; }
   .publication-hero .publication-affiliations { font-size: .8rem; margin: 0 auto; max-width: 345px; }
   .institution-logos { gap: 1rem 2.2rem; max-width: 340px; margin: 1.35rem auto 1.6rem; }
